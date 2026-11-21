@@ -99,7 +99,6 @@ A configuração principal está em `playwright.config.js`:
 - Execução paralela habilitada
 - Traces coletados na primeira tentativa repetida
 - Relatório HTML habilitado
-- Firefox e WebKit estão configurados como exemplos comentados
 
 ## Boas práticas
 
