@@ -1,8 +1,8 @@
 name: Rodando Testes de Regressão com Push
 
 on: 
-  push
-  workflow_dispatch
+  push:
+  workflow_dispatch:
 
 jobs:
   playwright-run:
