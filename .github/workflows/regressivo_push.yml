@@ -1,4 +1,4 @@
-name: Rodando Testes de Regressão com Push
+name: Rodando Testes de Regressão
 
 on: 
   push:
