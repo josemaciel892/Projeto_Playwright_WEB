@@ -2,8 +2,6 @@ name: Rodando Testes de Regressão com Push
 
 on: push
 
-    workflow_dispatch:
-
 jobs:
   playwright-run:
     runs-on: ubuntu-24.04
