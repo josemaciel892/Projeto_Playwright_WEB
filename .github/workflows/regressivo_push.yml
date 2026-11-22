@@ -1,10 +1,14 @@
 name: Rodando Testes de Regressão com Push
 
 on: push
+  branches:
+    - main  
+
+    workflow_dispatch:
 
 jobs:
   playwright-run:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Baixando projeto
