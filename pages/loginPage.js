@@ -17,9 +17,6 @@ export class LoginPage {
   async preencherCredenciais(email, senha) {
     await this.userInput.fill(email)
     await this.passwordInput.fill(senha)
-  }
-
-  async submeterLogin() {
     await this.loginButton.click()
   }
 
@@ -30,7 +27,6 @@ export class LoginPage {
 
   async realizarLogin(usuario) {
     await this.preencherCredenciais(usuario.email, usuario.senha)
-    await this.submeterLogin()
     await this.confirmarLoginRealizado()
   }
 }

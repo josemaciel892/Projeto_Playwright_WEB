@@ -1,8 +1,8 @@
 import { test } from '@playwright/test'
-import { LoginPage } from '../pages/loginPage'
-import { CheckoutPage } from '../pages/checkoutPage'
-import { Usuarios } from '../fixtures/usuarios'
-import { Checkout } from '../fixtures/checkout'
+import { LoginPage } from '../../pages/loginPage'
+import { CheckoutPage } from '../../pages/checkoutPage'
+import { Usuarios } from '../../fixtures/usuarios'
+import { Checkout } from '../../fixtures/checkout'
 
 test.beforeEach(async ({ page }) => {
   const loginPage = new LoginPage(page)
