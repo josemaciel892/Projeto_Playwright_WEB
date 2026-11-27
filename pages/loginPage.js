@@ -1,17 +1,18 @@
 import { expect } from '@playwright/test'
+import { BasePage } from './BasePage'
 
-export class LoginPage {
+export class LoginPage extends BasePage {
   constructor(page) {
-    this.page = page
+    super(page)
     this.userInput = page.locator('#user')
     this.passwordInput = page.locator('#password')
     this.loginButton = page.getByRole('button', { name: 'login' })
     this.successMessage = page.getByText('Login realizado')
     this.okButton = page.getByRole('button', { name: 'OK' })
   }
-
-  async goto() {
-    await this.page.goto('/login')
+    
+  async open() {
+    await this.goto('login')
   }
 
   async preencherCredenciais(email, senha) {
