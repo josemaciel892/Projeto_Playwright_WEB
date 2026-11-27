@@ -1,29 +1,25 @@
 import { expect } from '@playwright/test'
 import { BasePage } from './BasePage'
-
+import { LoginLocators } from '../locators/LoginLocators'
 export class LoginPage extends BasePage {
   constructor(page) {
     super(page)
-    this.userInput = page.locator('#user')
-    this.passwordInput = page.locator('#password')
-    this.loginButton = page.getByRole('button', { name: 'login' })
-    this.successMessage = page.getByText('Login realizado')
-    this.okButton = page.getByRole('button', { name: 'OK' })
+    this.locators = new LoginLocators(page)
   }
-    
+
   async open() {
     await this.goto('login')
   }
 
   async preencherCredenciais(email, senha) {
-    await this.userInput.fill(email)
-    await this.passwordInput.fill(senha)
-    await this.loginButton.click()
+    await this.locators.userInput.fill(email)
+    await this.locators.passwordInput.fill(senha)
+    await this.locators.loginButton.click()
   }
 
   async confirmarLoginRealizado() {
-    await expect(this.successMessage).toBeVisible()
-    await this.okButton.click()
+    await expect(this.locators.successMessage).toBeVisible()
+    await this.locators.okButton.click()
   }
 
   async realizarLogin(usuario) {
