@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test'
 import { BasePage } from './BasePage'
-import { CheckoutLocators } from '../locators/CheckoutLocators'
+import { CheckoutLocators } from '../locators/checkoutLocators'
 
 export class CheckoutPage extends BasePage {
   constructor(page) {
